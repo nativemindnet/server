@@ -1,0 +1,1 @@
+dd if= of=test bs=1M count=1 skip=10000

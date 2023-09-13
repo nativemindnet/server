@@ -1,0 +1,24 @@
+CLIENTDISKS='{
+    "ilyakor":{
+    "ilyakor_5":"ilyakor",
+    "ilyakor_6":"ilyakor",
+    "ilyakor_7":"ilyakor",
+    "ilyakor_8":"ilyakor",
+    "ilyakor":"ilyakor"
+    },
+    "andrew2":{
+    "andrew2":"andrew2",
+    "My Passport":"andrew2",
+    "6E0FB1EC6BBF9CAD":"andrew2",
+    "ANDREW2_99":"andrew2",
+    "ANDREW24_MYPASSPORT":"andrew2",
+    "ANDREW10_PASSPORT":"andrew2",
+    "ANDREW26":"andrew2",
+    "ANDREW2_99":"andrew2",
+    "ANDREW25":"andrew2",
+    "ANDREW11_PASSPORT":"andrew2",
+    "ANDREW11_PASSPORT":"andrew2",
+    "ANDREW26_PASSPORT":"andrew2",
+    "ANDREW26_MYPASSPORT":"andrew2"
+    }
+}'

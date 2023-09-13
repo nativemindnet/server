@@ -1,0 +1,23 @@
+#!/bin/bash
+. /opt/plot.worker/config/config.sh
+
+date
+echo mount_google_all
+
+#mkdir -p /mnt/disk/sd2/google
+#ln -s /mnt/disk/sda/google/  /mnt/disk/sd2/google/
+mkdir -p /mnt/disk/sd2/google/log/
+
+#killall google-drive-ocamlfuse
+#pkill google-drive-ocamlfuse
+#sleep 2
+
+/opt/plot.worker/actions/mount/google/mount_google.sh own2_upload2
+/opt/plot.worker/actions/mount/google/mount_google.sh own2_upload3
+/opt/plot.worker/actions/mount/google/mount_google.sh own2_upload4
+/opt/plot.worker/actions/mount/google/mount_google.sh own2_upload5
+/opt/plot.worker/actions/mount/google/mount_google.sh own2_upload6
+/opt/plot.worker/actions/mount/google/mount_google.sh own2_upload7
+
+echo sleep 20
+sleep 20

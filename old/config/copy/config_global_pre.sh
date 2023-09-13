@@ -1,0 +1,33 @@
+#1res + 4c320
+
+LOGPATH=/var/log/plot.worker
+WORKPATH=/opt/plot.worker
+BINPATH=/opt/plot.worker/bin
+JQ=/opt/plot.worker/bin/jq
+
+mkdir -p $LOGPATH
+#LOGPATH=/opt/pre/log
+
+PAUSE1=20
+PAUSE2=3000
+PAUSE3=3600
+
+MEM=4608
+RCOUNT=3
+BUCKETS=128
+
+RCOUNT2=16
+BUCKETS2=256
+
+#CHUNKSIZE=8196
+CHUNKSIZE=32768
+#монтирование md
+DISKMD=md127
+LABELSD1=sd1
+LABELSEC1=sd1
+
+TASKSET=0,1,2,3,4,5,6,7
+#TASKSET1=0,1,2,3
+#TASKSET1=0,1,2,3
+#TASKSET1=0,1,2,3
+#TASKSET1=0,1,2,3

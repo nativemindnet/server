@@ -1,0 +1,8 @@
+MNTPATH=/mnt/net/smb/rt1_netdisk
+NETPATH=//192.168.101.101/rt1_netdisk/h/$HOSTNAME
+umount $MNTPATH
+mkdir -p $MNTPATH 
+
+sudo mount -t cifs $NETPATH $MNTPATH -o user=ilya,password=undrograwate
+
+df -H

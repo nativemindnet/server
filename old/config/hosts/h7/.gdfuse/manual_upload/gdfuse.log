@@ -1,0 +1,31 @@
+[0.000390] TID=0: Setting up manual_upload filesystem...
+[0.000421] TID=0: BEGIN: Saving configuration in /home/anton/.gdfuse/manual_upload/config
+[0.000620] TID=0: END: Saving configuration in /home/anton/.gdfuse/manual_upload/config
+[0.000630] TID=0: Loading application state from /home/anton/.gdfuse/manual_upload/state...done
+Current version: 0.7.26
+Docs mode not changed!
+Setting up cache db...done
+Setting up CURL...done
+[0.002641] TID=0: BEGIN: Saving application state in /home/anton/.gdfuse/manual_upload/state
+[0.002770] TID=0: END: Saving application state in /home/anton/.gdfuse/manual_upload/state
+[0.002796] TID=0: BEGIN: Starting web browser with command: xdg-open "https://accounts.google.com/o/oauth2/auth?client_id=564921029129.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fgd-ocaml-auth.appspot.com%2Foauth2callback&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fdrive&response_type=code&access_type=offline&approval_prompt=force&state=y2xsPdfpNpK%2FB8v-RI%2F9A45i3QgKPf-OIoqfxm-di7o"
+[0.005517] TID=0: END: Starting web browser with command: xdg-open "https://accounts.google.com/o/oauth2/auth?client_id=564921029129.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fgd-ocaml-auth.appspot.com%2Foauth2callback&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fdrive&response_type=code&access_type=offline&approval_prompt=force&state=y2xsPdfpNpK%2FB8v-RI%2F9A45i3QgKPf-OIoqfxm-di7o"
+[0.005538] TID=0: BEGIN: Getting tokens from GAE proxy
+[0.327661] TID=0: END: gettokens not found, retrying
+[0.336448] TID=0: Retrying (1/8) get_tokens after exception: Not_found
+[2.268475] TID=0: END: gettokens not found, retrying
+[2.276865] TID=0: Retrying (2/8) get_tokens after exception: Not_found
+[5.174720] TID=0: END: gettokens not found, retrying
+[5.183540] TID=0: Retrying (3/8) get_tokens after exception: Not_found
+[9.720728] TID=0: END: gettokens not found, retrying
+[9.729668] TID=0: Retrying (4/8) get_tokens after exception: Not_found
+[18.366476] TID=0: END: gettokens not found, retrying
+[18.375135] TID=0: Retrying (5/8) get_tokens after exception: Not_found
+[35.212539] TID=0: END: gettokens not found, retrying
+[35.221063] TID=0: Retrying (6/8) get_tokens after exception: Not_found
+[68.521516] TID=0: END: gettokens not found, retrying
+[68.530424] TID=0: Retrying (7/8) get_tokens after exception: Not_found
+[133.839730] TID=0: END: gettokens not found, retrying
+[133.847839] TID=0: Retrying (8/8) get_tokens after exception: Not_found
+[262.523912] TID=0: END: gettokens not found, retrying
+[262.532278] TID=0: Error during get_tokens after 8 attempts: Not_found

@@ -1,0 +1,4 @@
+GOOGLEDISK1=google_manual_upload
+GOOGLEDISK2=google_own_upload
+#GOOGLEDISK3=anton1_upload
+#GOOGLEDISK4=anton2_upload

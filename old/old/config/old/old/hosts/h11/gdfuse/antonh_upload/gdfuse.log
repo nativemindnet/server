@@ -1,0 +1,31 @@
+[0.001488] TID=0: Setting up antonh_upload filesystem...
+[0.001520] TID=0: BEGIN: Saving configuration in /home/anton/.gdfuse/antonh_upload/config
+[0.001697] TID=0: END: Saving configuration in /home/anton/.gdfuse/antonh_upload/config
+[0.001706] TID=0: Loading application state from /home/anton/.gdfuse/antonh_upload/state...not found.
+[0.001733] TID=0: BEGIN: Saving application state in /home/anton/.gdfuse/antonh_upload/state
+[0.001841] TID=0: END: Saving application state in /home/anton/.gdfuse/antonh_upload/state
+Current version: 0.7.26
+Docs mode not changed!
+Setting up cache db...done
+Setting up CURL...done
+[0.049646] TID=0: BEGIN: Saving application state in /home/anton/.gdfuse/antonh_upload/state
+[0.049764] TID=0: END: Saving application state in /home/anton/.gdfuse/antonh_upload/state
+[0.049789] TID=0: BEGIN: Starting web browser with command: xdg-open "https://accounts.google.com/o/oauth2/auth?client_id=564921029129.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fgd-ocaml-auth.appspot.com%2Foauth2callback&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fdrive&response_type=code&access_type=offline&approval_prompt=force&state=UrZd5gTuKZpFRnpEvoOLim0LE2Ny7TQZTLpxKI8YYZE"
+[0.052712] TID=0: END: Starting web browser with command: xdg-open "https://accounts.google.com/o/oauth2/auth?client_id=564921029129.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fgd-ocaml-auth.appspot.com%2Foauth2callback&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fdrive&response_type=code&access_type=offline&approval_prompt=force&state=UrZd5gTuKZpFRnpEvoOLim0LE2Ny7TQZTLpxKI8YYZE"
+[0.052735] TID=0: BEGIN: Getting tokens from GAE proxy
+[0.582754] TID=0: END: gettokens not found, retrying
+[0.590502] TID=0: Retrying (1/8) get_tokens after exception: Not_found
+[2.198032] TID=0: END: gettokens not found, retrying
+[2.205281] TID=0: Retrying (2/8) get_tokens after exception: Not_found
+[4.899980] TID=0: END: gettokens not found, retrying
+[4.908249] TID=0: Retrying (3/8) get_tokens after exception: Not_found
+[9.990326] TID=0: END: gettokens not found, retrying
+[9.998466] TID=0: Retrying (4/8) get_tokens after exception: Not_found
+[18.778609] TID=0: END: gettokens not found, retrying
+[18.786937] TID=0: Retrying (5/8) get_tokens after exception: Not_found
+[35.526107] TID=0: END: gettokens ok
+[35.532529] TID=0: BEGIN: Saving application state in /home/anton/.gdfuse/antonh_upload/state
+[35.532853] TID=0: END: Saving application state in /home/anton/.gdfuse/antonh_upload/state
+[35.532884] TID=0: Starting filesystem /mnt/net/google/antonh_upload
+[35.590287] TID=1: init_filesystem
+[35.590460] TID=1: Starting flush DB thread (TID=2, interval=30s)

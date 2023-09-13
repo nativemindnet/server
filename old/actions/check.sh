@@ -1,0 +1,1 @@
+chia plots check -n 1 2>&1 | grep Farm

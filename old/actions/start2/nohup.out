@@ -1,0 +1,46 @@
+rm 1
+rm: cannot remove '/mnt/disk/sd1/temp1/1/*': No such file or directory
+rm: cannot remove '/mnt/disk/sd3/temp2/1/*': No such file or directory
+rm 2
+rm: cannot remove '/mnt/disk/sd1/temp1/2/*': No such file or directory
+rm: cannot remove '/mnt/disk/sd3/temp2/2/*': No such file or directory
+rm ok
+start 1
+3830
+rm 1
+rm: cannot remove '/mnt/disk/sd1/temp1/1/*': No such file or directory
+rm 2
+rm: cannot remove '/mnt/disk/sd1/temp1/2/*': No such file or directory
+<<<<<<< HEAD
+rm ok
+start 1
+4003
+=======
+rm: cannot remove '/mnt/disk/sd1/temp2/2/*': No such file or directory
+rm ok
+start 1
+22213
+>>>>>>> 43af30ef9bff093fd0f2da3ed183b9d50bca6f46
+rm 1
+rm: cannot remove '/mnt/disk/sd1/temp1/1/*': No such file or directory
+rm 2
+rm: cannot remove '/mnt/disk/sd1/temp1/2/*': No such file or directory
+<<<<<<< HEAD
+rm: cannot remove '/mnt/disk/sd3/temp2/2/*': No such file or directory
+rm ok
+start 1
+4065
+=======
+rm: cannot remove '/mnt/disk/sd1/temp2/2/*': No such file or directory
+rm ok
+start 1
+22291
+rm 1
+rm: cannot remove '/mnt/disk/sd1/temp1/1/*': No such file or directory
+rm 2
+rm: cannot remove '/mnt/disk/sd1/temp1/2/*': No such file or directory
+rm: cannot remove '/mnt/disk/sd1/temp2/2/*': No such file or directory
+rm ok
+start 1
+22366
+>>>>>>> 43af30ef9bff093fd0f2da3ed183b9d50bca6f46

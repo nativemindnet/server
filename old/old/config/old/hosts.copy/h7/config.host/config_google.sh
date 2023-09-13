@@ -1,0 +1,4 @@
+GOOGLEDISK1=antonh_upload
+GOOGLEDISK2=garikh_upload
+#GOOGLEDISK3=anton1_upload
+#GOOGLEDISK4=anton2_upload

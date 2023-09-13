@@ -1,0 +1,30 @@
+echo $'#!/bin/sh\necho $* > /dev/stderr' > xdg-open
+chmod 755 xdg-open
+env PATH=`pwd`:$PATH google-drive-ocamlfuse
+
+google-drive-ocamlfuse -cc
+
+
+google-drive-ocamlfuse /mnt/net/google/client1
+#google-drive-ocamlfuse -label me /mnt/net/google/client1
+
+#https://github.com/astrada/google-drive-ocamlfuse/wiki/Headless-Usage-&-Authorization
+#https://gist.github.com/prochor666/6475aaff0e06a846d86f8496c0bbd2fa
+
+
+#google-drive-ocamlfuse /mnt/net/google/client1
+
+#google-drive-ocamlfuse -headless -label me -id 290347195576-4ci34h6bbjrk4eurnipt33bfc2rd1cjl.apps.googleusercontent.com.apps.googleusercontent.com -secret hhZU--qY_pylh9cqJZkj0tVe
+
+#google-drive-ocamlfuse -headless -label me -id 290347195576-6tnftt57ovp92bjlu9746s6c2fn3a53a.apps.googleusercontent.com.apps.googleusercontent.com.apps.googleusercontent.com -secret flac93ICP9ietaPGdsQlvnVW
+
+#google-drive-ocamlfuse -headless -label me /mnt/net/google/client1
+
+exit
+
+
+#gcloud auth application-default login
+
+mkdir -p /mnt/net/google/client1
+gcsfuse your_bucket_name /mnt/net/google/client1
+

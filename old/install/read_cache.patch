@@ -1,0 +1,78 @@
+diff -Naur bcache.orig/bcache.h bcache/bcache.h
+--- bcache.orig/bcache.h	2019-11-25 03:32:01.000000000 +0300
++++ bcache/bcache.h	2021-06-30 12:11:16.000000000 +0300
+@@ -362,6 +362,8 @@
+ 	unsigned int		sequential_cutoff;
+ 	unsigned int		readahead;
+ 
++    unsigned int        cache_read_enable:1;
++
+ 	unsigned int		io_disable:1;
+ 	unsigned int		verify:1;
+ 	unsigned int		bypass_torture_test:1;
+diff -Naur bcache.orig/request.c bcache/request.c
+--- bcache.orig/request.c	2019-11-25 03:32:01.000000000 +0300
++++ bcache/request.c	2021-06-30 12:24:42.000000000 +0300
+@@ -379,6 +379,7 @@
+ 	unsigned int sectors, congested;
+ 	struct task_struct *task = current;
+ 	struct io *i;
++    int rw = bio_data_dir(bio);
+ 
+ 	if (test_bit(BCACHE_DEV_DETACHING, &dc->disk.flags) ||
+ 	    c->gc_stats.in_use > CUTOFF_CACHE_ADD ||
+@@ -386,6 +387,7 @@
+ 		goto skip;
+ 
+ 	if (mode == CACHE_MODE_NONE ||
++		(!rw && !dc->cache_read_enable) ||
+ 	    (mode == CACHE_MODE_WRITEAROUND &&
+ 	     op_is_write(bio_op(bio))))
+ 		goto skip;
+diff -Naur bcache.orig/super.c bcache/super.c
+--- bcache.orig/super.c	2019-11-25 03:32:01.000000000 +0300
++++ bcache/super.c	2021-06-30 12:24:42.000000000 +0300
+@@ -1292,6 +1292,7 @@
+ 	bch_cache_accounting_init(&dc->accounting, &dc->disk.cl);
+ 
+ 	dc->sequential_cutoff		= 4 << 20;
++	dc->cache_read_enable       = true;
+ 
+ 	for (io = dc->io; io < dc->io + RECENT_IO; io++) {
+ 		list_add(&io->lru, &dc->io_lru);
+diff -Naur bcache.orig/sysfs.c bcache/sysfs.c
+--- bcache.orig/sysfs.c	2019-11-25 03:32:01.000000000 +0300
++++ bcache/sysfs.c	2021-06-30 12:24:42.000000000 +0300
+@@ -100,6 +100,7 @@
+ rw_attribute(sequential_cutoff);
+ rw_attribute(data_csum);
+ rw_attribute(cache_mode);
++rw_attribute(cache_read_enable);
+ rw_attribute(stop_when_cache_set_failed);
+ rw_attribute(writeback_metadata);
+ rw_attribute(writeback_running);
+@@ -178,6 +179,7 @@
+ 	var_printf(bypass_torture_test,	"%i");
+ 	var_printf(writeback_metadata,	"%i");
+ 	var_printf(writeback_running,	"%i");
++	var_printf(cache_read_enable,   "%i");
+ 	var_print(writeback_delay);
+ 	var_print(writeback_percent);
+ 	sysfs_hprint(writeback_rate,
+@@ -287,6 +289,7 @@
+ 	sysfs_strtoul_bool(writeback_metadata, dc->writeback_metadata);
+ 	sysfs_strtoul_bool(writeback_running, dc->writeback_running);
+ 	sysfs_strtoul_clamp(writeback_delay, dc->writeback_delay, 0, UINT_MAX);
++	d_strtoul(cache_read_enable);
+ 
+ 	sysfs_strtoul_clamp(writeback_percent, dc->writeback_percent,
+ 			    0, bch_cutoff_writeback);
+@@ -466,6 +469,8 @@
+ 	&sysfs_data_csum,
+ #endif
+ 	&sysfs_cache_mode,
++	&sysfs_cache_read_enable,
++	
+ 	&sysfs_stop_when_cache_set_failed,
+ 	&sysfs_writeback_metadata,
+ 	&sysfs_writeback_running,

@@ -1,0 +1,1 @@
+./make1.sh all3

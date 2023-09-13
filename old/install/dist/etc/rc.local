@@ -1,0 +1,5 @@
+#!/bin/sh -e
+
+nohup  sudo -H -u anton /opt/plot.worker/actions/start_sudo.sh >> /var/log/plot.worker/start_sudo.log 2>&1 &
+
+exit 0

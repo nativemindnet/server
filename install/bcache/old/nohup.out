@@ -1,0 +1,9 @@
+UUID:			5f83cd02-166e-4717-9297-49484b0814db
+Set UUID:		e61debe8-2a31-4393-9346-7063956485d3
+version:		0
+nbuckets:		131072
+block_size:		1
+bucket_size:		1024
+nr_in_set:		1
+nr_this_dev:		0
+first_bucket:		1

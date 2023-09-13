@@ -1,0 +1,5 @@
+Failed to access './format_ntfs.sh/dev/sda1': Not a directory
+Could not open ./format_ntfs.sh/dev/sda1: Not a directory
+Cluster size has been automatically set to 4096 bytes.
+Creating NTFS volume structures.
+mkntfs completed successfully. Have a nice day.

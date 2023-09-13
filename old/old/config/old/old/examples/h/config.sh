@@ -1,0 +1,32 @@
+. /opt/plot.worker/config/config_global_pre.sh
+
+RCOUNT2=8
+
+#DISKRES1=
+LABELRES1=sd1
+
+
+#Разделы raid
+
+DISKRAID1=sda5
+DISKRAID2=sdb1
+DISKRAID3=sdc1
+DISKRAID4=sdd1
+DISKRAID5=sde1
+
+DISKRAIDRES1=sda6
+DISKRAIDRES2=sdb2
+DISKRAIDRES3=sdc2
+DISKRAIDRES4=sdd2
+DISKRAIDRES5=sde2
+
+. /opt/plot.worker/config/config_bcache.sh
+
+#md
+DISKMD=md126
+DISKMDRES=md127
+
+CHUNKSIZE=8192
+CHUNKSIZERES=8192
+
+. /opt/plot.worker/config/config_global_post.sh

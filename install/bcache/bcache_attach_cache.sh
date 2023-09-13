@@ -1,0 +1,1 @@
+echo 97fe1b7b-83dd-4fd7-8b85-b5193c13309d > /sys/block/bcache1/bcache/attach

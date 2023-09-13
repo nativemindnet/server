@@ -1,0 +1,1 @@
+watch -n 0.1 'cat /proc/meminfo | egrep "(Dirty|Writeback)"'

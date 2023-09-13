@@ -1,0 +1,33 @@
+[0.000264] TID=0: Setting up garikh_upload filesystem...
+[0.000279] TID=0: BEGIN: Saving configuration in /home/ilya/.gdfuse/garikh_upload/config
+[0.000392] TID=0: END: Saving configuration in /home/ilya/.gdfuse/garikh_upload/config
+[0.000397] TID=0: Loading application state from /home/ilya/.gdfuse/garikh_upload/state...done
+Current version: 0.7.26
+Docs mode not changed!
+Setting up cache db...done
+Setting up CURL...done
+Refresh token already present.
+[0.001963] TID=0: Starting filesystem /mnt/net/google/garikh_upload
+[0.004457] TID=1: init_filesystem
+[9.356489] TID=2: getattr /
+[9.356568] TID=2: BEGIN: Loading metadata from db
+[9.357211] TID=2: BEGIN: Recalculating cache size (old value=0)
+[9.357290] TID=2: END: Recalculating cache size (new value=0)
+[9.357311] TID=2: END: Getting metadata: Not valid
+[9.357320] TID=2: BEGIN: Refreshing metadata
+[9.642226] TID=2: END: Refreshing metadata
+[9.642245] TID=2: BEGIN: Getting changes from server
+[9.808104] TID=2: END: Getting metadata: No need to update resource cache
+[9.808126] TID=2: BEGIN: Updating timestamps
+[9.809705] TID=2: END: Updating timestamps
+[9.809715] TID=2: BEGIN: Updating metadata in db
+[9.810471] TID=2: END: Updating metadata in db
+[9.810476] TID=2: BEGIN: Updating context
+[9.810482] TID=2: END: Updating context
+[9.813927] TID=2: BEGIN: Getting root folder id (team drive id=, root folder=1jcyr6SeBP7_Jv7tCGdlFUGE-a0Pcuo-S) from server
+[9.813976] TID=2: END: Getting root folder id (id=1jcyr6SeBP7_Jv7tCGdlFUGE-a0Pcuo-S) from server
+[9.813985] TID=2: BEGIN: Loading resource / (trashed=false) from db
+[9.814263] TID=2: END: Loading resource / (trashed=false) from db: Found (id=1, state=Synchronized)
+[10.219058] TID=3: statfs /
+[10.219093] TID=3: BEGIN: Getting metadata from context
+[10.219103] TID=3: END: Getting metadata: Valid
